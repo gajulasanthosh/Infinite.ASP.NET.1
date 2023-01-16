@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Day2.WebApps.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+    <Head>
+<title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .container{
+            width:1000px;
+            height:800px;
+            /*background-color:cornflowerblue;*/
+            margin:auto;
+        }
+        .logo{
+            width:150px;
+            height:150px;
+            background-image:url("/Images/Logo.jpg");
+            background-repeat:no-repeat;
+            /*background-color:dimgray;*/
+            float:left;
+        }
+        .searchbox{
+            width:850px;
+            height:150px;
+            /*background-color:coral;*/
+            float:right;
+        }
+        .content{
+            width:800px;
+            height:650px;
+            /*background-color:darkkhaki;*/
+            float:left;
+        }
+        .ads{
+            width:200px;
+            height:650px;
+            /*background-color:darkturquoise;*/
+            float:right;
+        }
+        .footer{
+            width:1000px;
+            height:100px;
+            /*background-color:mediumslateblue;*/
+            float:left;
+        }
+
+    </style>
+</Head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="logo">
+
+            </div>
+            <div class="searchbox">
+                <asp:TextBox ID="TxtSearch" runat="server" />
+                <asp:Button Text="Search" ID="BtnSearch" runat="server" />
+
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ChildContent1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div class="ads">
+
+            </div>
+            <div class="footer">
+                <center>This is Footer for the Website.</center>
+            </div>
+            
+        </div>
+    </form>
+</body>
+</html>
